@@ -1,6 +1,6 @@
 num = int(input('Enter yout test number:'))
 check = 0
-for i in range(num+1):
+for i in range(num + 1):
     if i == 0:
         continue
     if num % i == 0:
