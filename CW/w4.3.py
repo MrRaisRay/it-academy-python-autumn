@@ -1,0 +1,7 @@
+equation = input('Enter equation: ')
+equation = equation.replace('+', '')
+equation = equation.replace('x', '')
+equation = equation.split('  ')
+x = int(input('Enter  X: '))
+y= float(equation[0].strip()) * x + float(equation[1].strip())
+print('y = ', y)
