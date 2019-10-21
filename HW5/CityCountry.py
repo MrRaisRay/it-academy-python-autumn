@@ -6,7 +6,7 @@ for i in range(country_count):
     for string in str_for_parse[i]:
         if string == str_for_parse[i][0]:
             continue
-        main_dct.update({string : str_for_parse[i][0]})
+        main_dct.update({string: str_for_parse[i][0]})
 request_count = int(input('Enter how cities you search: '))
 request_lst = []
 for el in range(request_count):
