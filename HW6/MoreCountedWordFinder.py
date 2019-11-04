@@ -12,4 +12,5 @@ def more_counted_word():
     print(dct)
     print(res_list)
 
+
 more_counted_word()

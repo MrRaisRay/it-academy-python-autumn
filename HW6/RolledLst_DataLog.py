@@ -12,26 +12,26 @@ def loger(func):
 
 
 @loger
-def get_ranges(inner_lst):
+def get_ranges(in_ls):
     indicator = 0
     result_str = ''
-    for i in range(len(inner_lst)):
-        if i + 1 == len(inner_lst) and indicator == 1:
-            result_str += '-' + str(inner_lst[i])
+    for i in range(len(in_ls)):
+        if i + 1 == len(in_ls) and indicator == 1:
+            result_str += '-' + str(in_ls[i])
             break
-        elif i + 1 == len(inner_lst) and indicator == 0:
-            result_str += str(inner_lst[i])
+        elif i + 1 == len(in_ls) and indicator == 0:
+            result_str += str(in_ls[i])
             break
-        elif inner_lst[i] - 1 != inner_lst[i - 1] and inner_lst[i] + 1 != inner_lst[i + 1]:
-            result_str += str(inner_lst[i]) + ', '
-        elif inner_lst[i] - 1 != inner_lst[i - 1] and inner_lst[i] + 1 == inner_lst[i + 1]:
-            result_str += str(inner_lst[i])
+        elif in_ls[i] - 1 != in_ls[i - 1] and in_ls[i] + 1 != in_ls[i + 1]:
+            result_str += str(in_ls[i]) + ', '
+        elif in_ls[i] - 1 != in_ls[i - 1] and in_ls[i] + 1 == in_ls[i + 1]:
+            result_str += str(in_ls[i])
             indicator = 1
-        elif inner_lst[i] + 1 == inner_lst[i + 1]:
+        elif in_ls[i] + 1 == in_ls[i + 1]:
             indicator = 1
             continue
-        elif inner_lst[i] + 1 != inner_lst[i + 1]:
-            result_str += '-' + str(inner_lst[i]) + ', '
+        elif in_ls[i] + 1 != in_ls[i + 1]:
+            result_str += '-' + str(in_ls[i]) + ', '
             indicator = 0
     return result_str
 
