@@ -1,4 +1,5 @@
-from HW6.Num_n_Square import num_n_square, char_count
+from HW6.Num_n_Square import num_n_square
+from HW6.Num_n_Square import char_count
 from HW6.MoreCountedWordFinder import more_counted_word
 
 
