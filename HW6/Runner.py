@@ -1,8 +1,24 @@
-from . import n_n_s
+from HW6.Num_n_Square import num_n_square, char_count
+from HW6.MoreCountedWordFinder import more_counted_word
 
 
-def runner():
-    n_n_s()
+def runner(inner_lst):
+    print(inner_lst)
+    for el in inner_lst:
+        if el == 'sqr':
+            num_n_square(int(input('Enter num: ')))
+            break
+        elif el == 'charcout':
+            char_count(' '.join(input('Enter el like str: ').split()))
+            break
+        elif el == 'mcw':
+            more_counted_word()
+            break
+        elif not inner_lst:
+            num_n_square(int(input('Enter num: ')))
+            char_count(' '.join(input('Enter el like str: ').split()))
+            more_counted_word()
 
 
-runner()
+s = input('Enter needed func: ').split()
+runner(s)
