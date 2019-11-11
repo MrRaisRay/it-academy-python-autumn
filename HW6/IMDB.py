@@ -48,3 +48,4 @@ for year in range(1900, 2019,):
             break
     str_years += '\n'
 open('./years.txt', 'w').write(str(str_years))
+open('./years.txt', 'w').close()
