@@ -178,6 +178,6 @@ def gm():
         next_room()
 
 
-hero = Hero(str(input("Who are you stranger?(Warrior, Rogue or Mage)")))
+hero = Hero(str(input("Who are you stranger?(Warrior, Rogue or Mage)\n")))
 print_state()
 gm()
