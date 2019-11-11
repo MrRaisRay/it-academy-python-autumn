@@ -12,7 +12,9 @@ class Random_Enemy(object):
 class Treasure(object):
     def __init__(self):
         global hero
-        self.name = random.choice(['Icarus wings', 'Gephestus hammer', 'Zeus lightning'])
+        self.name = random.choice(['Icarus wings',
+                                   'Gephestus hammer',
+                                   'Zeus lightning'])
         if self.name == 'Gephestus hammer':
             self.effect = 'Strenght +1'
             hero.strength += 1
@@ -92,7 +94,7 @@ rooms_counter = 1
 
 
 def print_state():
-    print('HP=' + str(hero.hp) + " MP=" + str(hero.mp)+ " DG=" +
+    print('HP=' + str(hero.hp) + " MP=" + str(hero.mp) + " DG=" +
           str(hero.dodge))
 
 
