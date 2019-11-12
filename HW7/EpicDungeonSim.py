@@ -22,9 +22,11 @@ class Treasure(object):
         elif self.name == 'Icarus wings':
             self.effect = 'Agility +1'
             hero.agility += 1
+            hero.finding_treasures.append(self.name)
         elif self.name == 'Zeus lightning':
             self.effect = 'Intellect +1'
             hero.intellect += 1
+            hero.finding_treasures.append(self.name)
 
 
 class Hero(object):
@@ -101,6 +103,7 @@ def print_state():
 def escape_from_dungeon():
     global hero
     print(hero)
+    input("Press any key")
     exit()
 
 
@@ -134,6 +137,7 @@ def battle():
             print("Hero dodge enemy attack")
         if hero.hp <= 0:
             print("You died")
+            input("Press any key")
             exit()
 
 
