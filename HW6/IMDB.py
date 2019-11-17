@@ -1,5 +1,6 @@
 imdb = open('./ratings.list', 'r')
 file_str = imdb.read()
+imdb.close()
 start_point = file_str.find('      00000')
 end_point = file_str.find('\n\nBOTTOM 10')
 top_250 = file_str[start_point:end_point:]
@@ -47,5 +48,6 @@ for year in range(1900, 2019,):
             str_years += '+' * (dct_years[key] + 1)
             break
     str_years += '\n'
+print(str_years)
 open('./years.txt', 'w').write(str(str_years))
-open('./years.txt', 'w').close()
+
